@@ -312,26 +312,36 @@ resetArray = () => {
 
   console.log("reset complete");
 };
+
+let RetrievedArray = JSON.parse(localStorage.getItem("listing"));
 display = () => {
   document.querySelector("#target").innerHTML = "";
-  let RetrievedTaskArray = JSON.parse(localStorage.getItem("listing"));
   let retrievedList = localStorage.getItem("listing");
   JSON.parse(retrievedList).forEach((Planet) => {
     document.querySelector("#target").innerHTML += `
       <div class="Item"   >
       <img src="${Planet.image}" alt="PLanet IMage">  
       <h1>${Planet.name}</h1>
-      <h2>${Planet.atsmosphere}</h2>
-      <p class="subInfo" dir="rtl">${Planet.moons}</p>
-      <p class="subInfo" dir="rtl">${Planet.tempRange}</p>
-      <p class="subInfo" dir="rtl">${Planet.water}</p>
-      <p class="subInfo" dir="rtl">${Planet.size}</p>
-      <p class="subInfo" dir="rtl">${Planet.population}</p>
+      <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+      <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+      <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+      <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+      <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+      <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
       <img src="${Planet.populationURL}" alt="No lifeforms known">
 
       </div>
       `;
   });
 };
-
 display();
+hireSpecies =()=>{
+    for (let i = 0; i <= RetrievedArray.length; i++){
+     if (document.querySelectorAll('#pop').textContent=='none'){
+        console.log('no native lifeforms')
+     }
+
+        
+    }
+}
+

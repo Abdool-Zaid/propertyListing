@@ -38,6 +38,11 @@ a:active {
 body {
   background-color: var(--sixty);
 }
+#sort{
+    position: fixed;
+    top: 0;
+    
+}
 
 footer {
   background-color: var(--bgTemp);
