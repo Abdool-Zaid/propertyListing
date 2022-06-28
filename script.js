@@ -374,7 +374,7 @@ hireSpecies =()=>{
     
   }
   else{
-    let sorttedArray= 'not mooons'
+    display()
   }
   //  console.log(listing)
 }
