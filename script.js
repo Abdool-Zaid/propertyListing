@@ -313,35 +313,70 @@ resetArray = () => {
   console.log("reset complete");
 };
 
+let retrievedList = localStorage.getItem("listing");
 let RetrievedArray = JSON.parse(localStorage.getItem("listing"));
 display = () => {
   document.querySelector("#target").innerHTML = "";
-  let retrievedList = localStorage.getItem("listing");
   JSON.parse(retrievedList).forEach((Planet) => {
     document.querySelector("#target").innerHTML += `
-      <div class="Item"   >
-      <img src="${Planet.image}" alt="PLanet IMage">  
-      <h1>${Planet.name}</h1>
-      <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
-      <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
-      <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
-      <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
-      <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-      <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
-      <img src="${Planet.populationURL}" alt="No lifeforms known">
-
-      </div>
-      `;
+    <div class="Item"   >
+    <img src="${Planet.image}" alt="PLanet IMage">  
+    <h1>${Planet.name}</h1>
+    <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+    <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+    <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+    <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+    <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+    <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+    <img src="${Planet.populationURL}" alt="No lifeforms known">
+    
+    </div>
+    `;
   });
 };
 display();
 hireSpecies =()=>{
     for (let i = 0; i <= RetrievedArray.length; i++){
-     if (document.querySelectorAll('#pop').textContent=='none'){
+      if (document.querySelectorAll('#pop').textContent=='none'){
         console.log('no native lifeforms')
-     }
-
-        
+      }
+      
+      
     }
+  }
+  
+  SortList= ()=>{
+    // list.sort((a,b)=>{ return a.moons -b.moons})
+    let selectOption = ()=>{ return document.querySelector('#SortPlanets').value}
+    let sorttedArray = 'tar';
+    
+    if ( selectOption()=="moons") {
+      sorttedArray= listing.sort((a,b)=>{ return a.moons - b.moons});
+      let retrievedList =sorttedArray;
+      document.querySelector("#target").innerHTML = "";
+      (retrievedList).forEach((Planet) => {
+        
+        document.querySelector("#target").innerHTML += `
+        <div class="Item"   >
+        <img src="${Planet.image}" alt="PLanet IMage">  
+        <h1>${Planet.name}</h1>
+        <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+        <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+        <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+        <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+        <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+        <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+        <img src="${Planet.populationURL}" alt="No lifeforms known">
+        
+        </div>
+        `;
+      });
+    
+  }
+  else{
+    let sorttedArray= 'not mooons'
+  }
+  //  console.log(listing)
 }
+
 

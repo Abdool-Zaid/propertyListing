@@ -41,9 +41,15 @@ body {
 #sort{
     position: fixed;
     top: 0;
-    
+    display: flex;
+    margin-left: var(--ss);
+  }
+  
+  #sort > p {
+    margin-left: var(--ss);
+  padding-left: var(--ss);
+  
 }
-
 footer {
   background-color: var(--bgTemp);
   position: fixed;
