@@ -337,8 +337,8 @@ display = () => {
 display();
 hireSpecies = () => {
   for (let i = 0; i <= RetrievedArray.length; i++) {
-      if (document.querySelectorAll(".pop").innerHTML == "none") {
-        console.log(RetrievedArray.length);
+    if (document.querySelectorAll(".pop").innerHTML == "none") {
+      console.log(RetrievedArray.length);
     }
   }
 };
@@ -373,7 +373,9 @@ SortList = () => {
         `;
     });
   } else if (selectOption() == "atmosphere") {
-    sorttedArray = listing.sort((a, b) => (a.atmosphere > b.atmosphere ? 1 : -1));
+    sorttedArray = listing.sort((a, b) =>
+      a.atmosphere > b.atmosphere ? 1 : -1
+    );
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -392,8 +394,7 @@ SortList = () => {
         </div>
         `;
     });
-  }
-  else if (selectOption() == "name") {
+  } else if (selectOption() == "name") {
     sorttedArray = listing.sort((a, b) => (a.name > b.name ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
@@ -413,8 +414,7 @@ SortList = () => {
         </div>
         `;
     });
-  }
-  else if (selectOption() == "tempRange") {
+  } else if (selectOption() == "tempRange") {
     sorttedArray = listing.sort((a, b) => (a.tempRange < b.tempRange ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
@@ -434,8 +434,7 @@ SortList = () => {
         </div>
         `;
     });
-  }
-  else if (selectOption() == "water") {
+  } else if (selectOption() == "water") {
     sorttedArray = listing.sort((a, b) => (a.water > b.water ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
@@ -455,8 +454,7 @@ SortList = () => {
         </div>
         `;
     });
-  }
-  else if (selectOption() == "size") {
+  } else if (selectOption() == "size") {
     sorttedArray = listing.sort((a, b) => (a.size > b.size ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
@@ -476,9 +474,10 @@ SortList = () => {
         </div>
         `;
     });
-  }
-  else if (selectOption() == "population") {
-    sorttedArray = listing.sort((a, b) => (a.population > b.population ? 1 : -1));
+  } else if (selectOption() == "population") {
+    sorttedArray = listing.sort((a, b) =>
+      a.population > b.population ? 1 : -1
+    );
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -497,19 +496,18 @@ SortList = () => {
         </div>
         `;
     });
-  }
-  else{
-    display()
+  } else {
+    display();
   }
   //  console.log(listing)
 };
-SearchPlanet=()=>{
-  let SearchTerm=  document.querySelector('#SearchItem').value.toLowerCase()
-   let located = listing.find(listing =>listing.name === SearchTerm);
-   console.log(located)
-   JSON.parse(located).forEach((Planet) => {
-   document.querySelector("#target").innerHTML = "";
-  document.querySelector("#target").innerHTML = `
+SearchPlanet = () => {
+  let SearchTerm = document.querySelector("#SearchItem").value.toLowerCase();
+  let located = listing.find((listing) => listing.name === SearchTerm);
+  console.log(located);
+  JSON.parse(located).forEach((Planet) => {
+    document.querySelector("#target").innerHTML = "";
+    document.querySelector("#target").innerHTML = `
   <div class="Item" onclick='BuyNow()'  >
   <img src="${Planet.image}" alt="PLanet IMage">  
   <h1>${Planet.name}</h1>
@@ -523,9 +521,16 @@ SearchPlanet=()=>{
   
   </div>
   `;
-//   console.log(SearchTerm)
-}); 
-}
-BuyNow= ()=>{
-    alert('purchased')
-}
+    //   console.log(SearchTerm)
+  });
+};
+BuyNow = () => {
+  alert("purchased");
+};
+
+ToAdminPage = () => {
+  let password = document.querySelector("#LogIn").value;
+  if (password == "you") {
+    window.location.href = "./admin.html";
+  }
+};
