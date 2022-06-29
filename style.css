@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Electrolize', sans-serif;
 }
 :root {
   --bgTemp: #123417;
@@ -80,8 +81,13 @@ marquee > a {
   padding: var(--ss);
 }
 .Item {
+  margin-top: var(--sf);
   background-color: var(--thirty);
   width: fit-content;
   padding: var(--ss);
   margin-bottom: var(--ss);
+}
+
+#empty{
+  margin-top: var(--sf);
 }

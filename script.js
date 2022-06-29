@@ -555,30 +555,7 @@ SortList = () => {
   }
   //  console.log(listing)
 };
-SearchPlanet = () => {
-  let SearchTerm = document.querySelector("#SearchItem").value.toLowerCase();
-  let located = listing.find((listing) => listing.name === SearchTerm);
-  console.log(located);
-  JSON.parse(located).forEach((Planet) => {
-    document.querySelector("#target").innerHTML = "";
-    document.querySelector("#target").innerHTML = `
-  <div class="Item" onclick='BuyNow()'  >
-  <img src="${Planet.image}" alt="PLanet IMage">  
-  <h1>${Planet.name}</h1>
-  <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
-  <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
-  <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
-  <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
-  <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-  <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
-  <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
-  <img src="${Planet.populationURL}" alt="No lifeforms known">
-  
-  </div>
-  `;
-    //   console.log(SearchTerm)
-  });
-};
+
 BuyNow = () => {
   alert("purchased");
 };
@@ -622,16 +599,34 @@ else{
     display()
 }
 }
-searchPlanets=()=>{
-    console.log('running')
-     let SearchTerm= document.querySelector('#searchInput').value;
-     if(SearchTerm==''){
-        alert(`enter a planet's name`)
-    }
-    else{
-        document.querySelector('#target')='';
-        let item = listing.filter((Planet)=>{
-            Planet.name==SearchTerm
-        })
-    }
+searchPlanet=()=>{
+  let SearchTerm= document.querySelector('#searchInput').value;
+  if(SearchTerm==''){
+    alert(`enter a planet's name`)
+  }
+  else{
+    document.querySelector('#target').innerHTML='';
+    let item = listing.find(o => o.name === SearchTerm)
+    
+    document.querySelector('#target').innerHTML=` <div id="empty">
+    <h1>No Planet found</h1>
+    </div>`;
+    
+    document.querySelector('#target').innerHTML=`
+    <div class="Item"  onclick='BuyNow()'  >
+    <img src="${item.image}"  alt="PLanet IMage">  
+    <h1>${item.name}</h1>
+    <h4 dir="rtl">atmospheric conditions: ${item.atmosphere}</h4>
+    <p class="subInfo" dir="rtl">Moons: ${item.moons}</p>
+    <p class="subInfo" dir="rtl">Weather: ${item.tempRange}</p>
+    <p class="subInfo" dir="rtl"> water: ${item.water}</p>
+    <p class="subInfo" dir="rtl"> Size: ${item.size}</p>
+    <p class="subInfo" dir="rtl" class='pop'> population: ${item.population}</p>
+    <p class="subInfo" dir="rtl"> JWT: ${item.price}</p>
+    <img src="${item.populationURL}" alt="No lifeforms known">
+    
+    </div>
+    `;
+
+  }
 }
