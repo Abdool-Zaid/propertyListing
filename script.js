@@ -589,3 +589,37 @@ ToAdminPage = () => {
     window.location.href = "./admin.html";
   }
 };
+FilterPlanets=()=>{
+    let FilterOption= document.querySelector('#filter').value
+    if(FilterOption!=='all'){
+
+        console.log(FilterOption)
+        document.querySelector('#target').innerHTML='';
+            let specificView= listing.filter(Planet => Planet.tempRange == FilterOption);
+        specificView.forEach((Planet)=>{
+
+            document.querySelector('#target').innerHTML+=`
+            <div class="Item"  onclick='BuyNow()'  >
+            <img src="${Planet.image}"  alt="PLanet IMage">  
+            <h1>${Planet.name}</h1>
+            <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+    <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+    <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+    <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+    <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+    <p class="subInfo" dir="rtl" class='pop'> population: ${Planet.population}</p>
+    <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+    <img src="${Planet.populationURL}" alt="No lifeforms known">
+    
+    </div>
+    `;   
+    console.log(specificView)
+});
+
+
+}
+else{
+    display()
+}
+}
+
