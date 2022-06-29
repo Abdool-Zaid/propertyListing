@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --bgTemp: #123417;
+    --ss: 1%;
+    --sixty: #1e3a60;
+    --thirty: #0e718f;
+    --acc: #42c8ee;
+    --sf: 2em;
+    --full: 100%;
+  }
+  /* unvisited link */
+  a:link {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a:active {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  body {
+    background-color: var(--sixty);
+  }
+  #nav{
+    position: fixed;
+    top: 0; 
+  }
+  #target{
+margin: var(--ss);
+    
+    display: flex;
+    flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: var(--ss);
+  align-content: center;
+  }
+  .Item {
+    background-color: var(--thirty);
+    width: 95%;
+    padding: var(--ss);
+    margin-bottom: var(--ss);
+    display: flex;
+  }
+  img{
+    margin: var(--ss);
+  }

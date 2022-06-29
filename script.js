@@ -10,6 +10,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
   ? JSON.parse(localStorage.getItem("listing"))
   : [
       {
+        id: 1,
         name: "Arceus",
         atmosphere: "minimal",
         moons: "3",
@@ -21,8 +22,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(11).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(1).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 2,
         name: "Khannis",
         atmosphere: "adequate",
         moons: "1",
@@ -34,8 +37,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download.png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(2).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 3,
         name: "Vellox",
         atmosphere: "ample",
         moons: "12",
@@ -47,8 +52,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(32).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(3).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 4,
         name: "Dreml",
         atmosphere: "none",
         moons: "11",
@@ -60,8 +67,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(13).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(4).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 5,
         name: "Sx900t3",
         atmosphere: "none",
         moons: "0",
@@ -73,8 +82,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(12).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(5).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 6,
         name: "Rasenues",
         atmosphere: "ample",
         moons: "3",
@@ -86,8 +97,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(28).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(6).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 7,
         name: "Kretic",
         atmosphere: "minimal",
         moons: "2",
@@ -98,8 +111,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         populationURL: "",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(7).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 8,
         name: "Nikalum",
         atmosphere: "ample",
         moons: "3",
@@ -111,8 +126,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(27).png ",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(8).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 9,
         name: "Luxem",
         atmosphere: "minimal",
         moons: "2",
@@ -124,8 +141,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(26).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(9).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 10,
         name: "Tsubo",
         atmosphere: "minmal",
         moons: "1",
@@ -137,8 +156,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(38).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(10).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 11,
         name: "Umbrosphere",
         atmosphere: "minimal",
         moons: "0",
@@ -150,8 +171,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(2).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(11).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 12,
         name: "Xluf",
         atmosphere: "ample",
         moons: "33",
@@ -163,8 +186,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(37).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(12).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 13,
         name: "Cxici",
         atmosphere: "minimal",
         moons: "12",
@@ -176,8 +201,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(18).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(13).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 14,
         name: "Ajian",
         atmosphere: "ample",
         moons: "5",
@@ -189,8 +216,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(28).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(14).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 15,
         name: "Yrgaxa",
         atmosphere: "none",
         moons: "25",
@@ -202,8 +231,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(12).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(15).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 16,
         name: "Uubo",
         atmosphere: "ample",
         moons: "35",
@@ -215,8 +246,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(4).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(16).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 17,
         name: "Pcinol",
         atmosphere: "ample",
         moons: "1",
@@ -228,8 +261,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(17).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(17).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 18,
         name: "Meyido",
         atmosphere: "ample",
         moons: "2",
@@ -240,8 +275,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         populationURL: "",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(18).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 19,
         name: "Cloacac",
         atmosphere: "ample",
         moons: "3",
@@ -253,8 +290,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(1).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(19).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 20,
         name: "Xilogop",
         atmosphere: "ample",
         moons: "1",
@@ -266,8 +305,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download.png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(20).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 21,
         name: "Venlo",
         atmosphere: "ample",
         moons: "2",
@@ -279,8 +320,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(25).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(21).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 22,
         name: "Prometheus",
         atmosphere: "ample",
         moons: "4",
@@ -292,8 +335,10 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(10).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(22).png",
+        price: Math.random() * 40000,
       },
       {
+        id: 23,
         name: "Jaxa",
         atmosphere: "ample",
         moons: "2",
@@ -305,6 +350,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(34).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download.png",
+        price: Math.random() * 40000,
       },
     ];
 resetArray = () => {
@@ -328,6 +374,7 @@ display = () => {
     <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
     <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
     <p class="subInfo" dir="rtl" class='pop'> population: ${Planet.population}</p>
+    <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
     <img src="${Planet.populationURL}" alt="No lifeforms known">
     
     </div>
@@ -367,6 +414,7 @@ SortList = () => {
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
         <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -389,6 +437,7 @@ SortList = () => {
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
         <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -409,6 +458,7 @@ SortList = () => {
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
         <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -429,6 +479,7 @@ SortList = () => {
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
         <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -449,6 +500,7 @@ SortList = () => {
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
         <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -469,6 +521,7 @@ SortList = () => {
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -491,6 +544,7 @@ SortList = () => {
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -517,6 +571,7 @@ SearchPlanet = () => {
   <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
   <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
   <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+  <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
   <img src="${Planet.populationURL}" alt="No lifeforms known">
   
   </div>
