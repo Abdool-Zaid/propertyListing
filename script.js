@@ -622,4 +622,16 @@ else{
     display()
 }
 }
-
+searchPlanets=()=>{
+    console.log('running')
+     let SearchTerm= document.querySelector('#searchInput').value;
+     if(SearchTerm==''){
+        alert(`enter a planet's name`)
+    }
+    else{
+        document.querySelector('#target')='';
+        let item = listing.filter((Planet)=>{
+            Planet.name==SearchTerm
+        })
+    }
+}

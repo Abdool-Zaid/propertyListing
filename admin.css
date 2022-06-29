@@ -54,7 +54,7 @@ margin: var(--ss);
   }
   .Item {
     background-color: var(--thirty);
-    width: 95%;
+
     padding: var(--ss);
     margin-bottom: var(--ss);
     display: flex;

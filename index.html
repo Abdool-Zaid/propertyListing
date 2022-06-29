@@ -44,6 +44,10 @@ search
         <option value="low">low</option>
         <option value="extreme">extreme</option>
       </select>
+      <form action="post" onsubmit="event.preventDefault()">
+          <input type="text" id="searchInput" placeholder="search">
+<button onclick="searchPlanets()">locate planet </button>
+      </form>
     </div>
     <!-- <canvas id="HUD" ></canvas> -->
     <!-- <canvas id="canvas" width="600" height="600" onclick="mouseEvent(0, event);" oncontextmenu="mouseEvent(1, event); return false;"></canvas> -->
