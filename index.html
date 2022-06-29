@@ -21,7 +21,14 @@
             <option value="population">population</option>
         </select>
         <button onclick="resetArray()">initialise</button>
-     
+     <form action="post" onsubmit="event.preventDefault()">
+    <label for="seacrh">
+        <input type="text" id="SearchItem" placeholder="search">
+    </label>
+    <button onclick="SearchPlanet()">
+search
+    </button> 
+</form>
         
     </div>
     <!-- <canvas id="HUD" ></canvas> -->

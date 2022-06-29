@@ -258,7 +258,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         name: "Xilogop",
         atmosphere: "ample",
         moons: "1",
-        tempRange: "habbitable",
+        tempRange: "habitable",
         water: "liquid",
         size: "medium",
         population: "native",
@@ -319,15 +319,15 @@ display = () => {
   document.querySelector("#target").innerHTML = "";
   JSON.parse(retrievedList).forEach((Planet) => {
     document.querySelector("#target").innerHTML += `
-    <div class="Item"   >
-    <img src="${Planet.image}" alt="PLanet IMage">  
+    <div class="Item"  onclick='BuyNow()'  >
+    <img src="${Planet.image}"  alt="PLanet IMage">  
     <h1>${Planet.name}</h1>
     <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
     <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
     <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
     <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
     <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-    <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+    <p class="subInfo" dir="rtl" class='pop'> population: ${Planet.population}</p>
     <img src="${Planet.populationURL}" alt="No lifeforms known">
     
     </div>
@@ -337,8 +337,8 @@ display = () => {
 display();
 hireSpecies = () => {
   for (let i = 0; i <= RetrievedArray.length; i++) {
-    if (document.querySelectorAll("#pop").textContent == "none") {
-      console.log("no native lifeforms");
+      if (document.querySelectorAll(".pop").innerHTML == "none") {
+        console.log(RetrievedArray.length);
     }
   }
 };
@@ -352,21 +352,21 @@ SortList = () => {
 
   if (selectOption() == "moons") {
     sorttedArray = listing.sort((a, b) => {
-      return a.moons - b.moons;
+      return b.moons - a.moons;
     });
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
       document.querySelector("#target").innerHTML += `
-        <div class="Item"   >
+        <div class="Item" onclick='BuyNow()' >
         <img src="${Planet.image}" alt="PLanet IMage">  
         <h1>${Planet.name}</h1>
+        <h1 class="subInfo" dir="rtl">Moons: ${Planet.moons}</h1>
         <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
-        <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-        <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -378,15 +378,15 @@ SortList = () => {
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
       document.querySelector("#target").innerHTML += `
-        <div class="Item"   >
+        <div class="Item" onclick='BuyNow()' >
         <img src="${Planet.image}" alt="PLanet IMage">  
         <h1>${Planet.name}</h1>
-        <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+        <h1 dir="rtl">atmosphere: ${Planet.atmosphere}</h1>
         <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-        <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -399,15 +399,15 @@ SortList = () => {
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
       document.querySelector("#target").innerHTML += `
-        <div class="Item"   >
+        <div class="Item"  onclick='BuyNow()' >
         <img src="${Planet.image}" alt="PLanet IMage">  
         <h1>${Planet.name}</h1>
-        <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+        <p class="subInfo" dir="rtl">atmospheric conditions: ${Planet.atmosphere}</p>
         <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-        <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -415,20 +415,20 @@ SortList = () => {
     });
   }
   else if (selectOption() == "tempRange") {
-    sorttedArray = listing.sort((a, b) => (a.tempRange > b.tempRange ? 1 : -1));
+    sorttedArray = listing.sort((a, b) => (a.tempRange < b.tempRange ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
       document.querySelector("#target").innerHTML += `
-        <div class="Item"   >
+        <div class="Item"  onclick='BuyNow()' >
         <img src="${Planet.image}" alt="PLanet IMage">  
         <h1>${Planet.name}</h1>
+        <h1>Weather: ${Planet.tempRange}</h1>
         <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
         <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
-        <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-        <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -441,15 +441,15 @@ SortList = () => {
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
       document.querySelector("#target").innerHTML += `
-        <div class="Item"   >
+        <div class="Item"  onclick='BuyNow()' >
         <img src="${Planet.image}" alt="PLanet IMage">  
         <h1>${Planet.name}</h1>
+        <h1> water: ${Planet.water}</h1>
         <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
         <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
-        <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-        <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -462,15 +462,15 @@ SortList = () => {
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
       document.querySelector("#target").innerHTML += `
-        <div class="Item"   >
+        <div class="Item" onclick='BuyNow()'  >
         <img src="${Planet.image}" alt="PLanet IMage">  
         <h1>${Planet.name}</h1>
+        <h1> Size: ${Planet.size}</h1>
         <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
         <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
-        <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-        <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -483,15 +483,15 @@ SortList = () => {
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
       document.querySelector("#target").innerHTML += `
-        <div class="Item"   >
+        <div class="Item"  onclick='BuyNow()' >
         <img src="${Planet.image}" alt="PLanet IMage">  
         <h1>${Planet.name}</h1>
+        <h1 class ='pop'> population: ${Planet.population}</h1>
         <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
         <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
         <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
         <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
         <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-        <p class="subInfo" dir="rtl" id ='pop'> population: ${Planet.population}</p>
         <img src="${Planet.populationURL}" alt="No lifeforms known">
         
         </div>
@@ -503,3 +503,29 @@ SortList = () => {
   }
   //  console.log(listing)
 };
+SearchPlanet=()=>{
+  let SearchTerm=  document.querySelector('#SearchItem').value.toLowerCase()
+   let located = listing.find(listing =>listing.name === SearchTerm);
+   console.log(located)
+   JSON.parse(located).forEach((Planet) => {
+   document.querySelector("#target").innerHTML = "";
+  document.querySelector("#target").innerHTML = `
+  <div class="Item" onclick='BuyNow()'  >
+  <img src="${Planet.image}" alt="PLanet IMage">  
+  <h1>${Planet.name}</h1>
+  <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+  <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+  <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+  <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+  <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+  <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+  <img src="${Planet.populationURL}" alt="No lifeforms known">
+  
+  </div>
+  `;
+//   console.log(SearchTerm)
+}); 
+}
+BuyNow= ()=>{
+    alert('purchased')
+}
