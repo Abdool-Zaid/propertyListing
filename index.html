@@ -12,8 +12,15 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="sort">
+  <body oncontextmenu="event.preventDefault(); navmenu(event)" >
+    <!-- <div id="sort">
+      <select name="filter" id="filter" onchange="FilterPlanets()">
+        <option value="all">all</option>
+        <option value="habitable">habitable</option>
+        <option value="high">high</option>
+        <option value="low">low</option>
+        <option value="extreme">extreme</option>
+      </select>
       <select name="sortPlanets" id="SortPlanets" onchange="SortList()">
         <option value="all">all</option>
         <option value="atmosphere">atmospheric conditions</option>
@@ -25,28 +32,76 @@
         <option value="population">population</option>
       </select>
       <button onclick="resetArray()">initialise</button>
-    
+      
       <form action="post" onsubmit="event.preventDefault()">
         <label for="LogIn"
-          ><input type="text" id="LogIn" placeholder="PassWord" />
-        </label>
-        <button onclick="ToAdminPage()">Log In</button>
-      </form>
-      <select name="filter" id="filter" onchange="FilterPlanets()">
+        ><input type="text" id="LogIn" placeholder="PassWord" />
+      </label>
+      <button onclick="ToAdminPage()">Log In</button>
+    </form>
+    <form action="post" onsubmit="event.preventDefault()">
+      <input type="text" id="searchInput" placeholder="search">
+      <button onclick="searchPlanet()">locate planet </button>
+    </form>
+  </div> -->
+  <!-- context menu -->
+  <div id="navMenu">
+    <div id="firstRow" class="hexagonArea">
+
+      <div id="filterMenu" class="hexagon"><select name="filter" id="filter" onchange="FilterPlanets()">
         <option value="all">all</option>
         <option value="habitable">habitable</option>
         <option value="high">high</option>
         <option value="low">low</option>
         <option value="extreme">extreme</option>
-      </select>
-      <form action="post" onsubmit="event.preventDefault()">
-          <input type="text" id="searchInput" placeholder="search">
-<button onclick="searchPlanet()">locate planet </button>
-      </form>
+      </select></div>
+      <div id="sortMenu" class="hexagon">
+        <select name="sortPlanets" id="SortPlanets" onchange="SortList()">
+          <option value="all">all</option>
+          <option value="atmosphere">atmospheric conditions</option>
+          <option value="name">name</option>
+          <option value="moons">moons</option>
+          <option value="tempRange">weather</option>
+          <option value="water">water</option>
+          <option value="size">size</option>
+          <option value="population">population</option>
+        </select>
+      </div>
     </div>
-    <!-- <canvas id="HUD" ></canvas> -->
-    <!-- <canvas id="canvas" width="600" height="600" onclick="mouseEvent(0, event);" oncontextmenu="mouseEvent(1, event); return false;"></canvas> -->
-    <div id="target"></div>
+    <div id="centerRow" class="hexagonArea">
+    <div id="intialMenu" class="hexagon"> 
+      
+      <button onclick="resetArray()">initialise</button>
+    </div>
+    <div id="centerdiv" class="hexagon">
+
+    </div>
+    <div id="logInMenu" class="hexagon">
+      <form action="post" onsubmit="event.preventDefault()">
+        <label for="LogIn"
+        ><input type="text" id="LogIn" placeholder="PassWord" />
+      </label>
+      <button onclick="ToAdminPage()">Log In</button>
+    </form>
+    
+  </div>
+</div>
+<div id="lastRow" class="hexagonArea">
+  <div id="searchMenu" class="hexagon">
+    <form action="post" onsubmit="event.preventDefault()">
+      <input type="text" id="searchInput" placeholder="search">
+      <button onclick="searchPlanet()">locate planet </button>
+    </form>
+
+  </div>
+  <div id="themeMenu" class="hexagon">
+    <p>input theme</p>
+  </div>
+</div>
+</div>
+<!-- <canvas id="HUD" ></canvas> -->
+<!-- <canvas id="canvas" width="600" height="600" onclick="mouseEvent(0, event);" oncontextmenu="mouseEvent(1, event); return false;"></canvas> -->
+<div id="target"></div>
 
     <footer>
       <marquee direction="right" scrollamount="3">

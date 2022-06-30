@@ -390,15 +390,61 @@ hireSpecies = () => {
   }
 };
 
+
+
+
+
+
+
+
+FilterPlanets=()=>{
+    let FilterOption= document.querySelector('#filter').value
+    if(FilterOption!=='all'){
+
+        document.querySelector('#target').innerHTML='';
+            let specificView= listing.filter(Planet => Planet.tempRange == FilterOption);
+        specificView.forEach((Planet)=>{
+
+            document.querySelector('#target').innerHTML+=`
+            <div class="Item"  onclick='BuyNow()'  >
+            <img src="${Planet.image}"  alt="PLanet IMage">  
+            <h1>${Planet.name}</h1>
+            <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+    <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+    <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+    <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+    <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+    <p class="subInfo" dir="rtl" class='pop'> population: ${Planet.population}</p>
+    <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+    <img src="${Planet.populationURL}" alt="No lifeforms known">
+    
+    </div>
+    `;   
+    
+}); 
+
+return specificView;
+
+
+}
+else{
+  display()
+  let specificView=listing
+  
+  return specificView;
+}
+}
+
 SortList = () => {
   // list.sort((a,b)=>{ return a.moons -b.moons})
   let selectOption = () => {
     return document.querySelector("#SortPlanets").value;
   };
-  let sorttedArray = "tar";
+  console.log(FilterPlanets())
+  let sorttedArray = FilterPlanets();
 
   if (selectOption() == "moons") {
-    sorttedArray = listing.sort((a, b) => {
+    sorttedArray = FilterPlanets().sort((a, b) => {
       return b.moons - a.moons;
     });
     let retrievedList = sorttedArray;
@@ -421,7 +467,7 @@ SortList = () => {
         `;
     });
   } else if (selectOption() == "atmosphere") {
-    sorttedArray = listing.sort((a, b) =>
+    sorttedArray = FilterPlanets().sort((a, b) =>
       a.atmosphere > b.atmosphere ? 1 : -1
     );
     let retrievedList = sorttedArray;
@@ -444,7 +490,7 @@ SortList = () => {
         `;
     });
   } else if (selectOption() == "name") {
-    sorttedArray = listing.sort((a, b) => (a.name > b.name ? 1 : -1));
+    sorttedArray = FilterPlanets().sort((a, b) => (a.name > b.name ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -465,7 +511,7 @@ SortList = () => {
         `;
     });
   } else if (selectOption() == "tempRange") {
-    sorttedArray = listing.sort((a, b) => (a.tempRange < b.tempRange ? 1 : -1));
+    sorttedArray = FilterPlanets().sort((a, b) => (a.tempRange < b.tempRange ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -486,7 +532,7 @@ SortList = () => {
         `;
     });
   } else if (selectOption() == "water") {
-    sorttedArray = listing.sort((a, b) => (a.water > b.water ? 1 : -1));
+    sorttedArray = FilterPlanets().sort((a, b) => (a.water > b.water ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -507,7 +553,7 @@ SortList = () => {
         `;
     });
   } else if (selectOption() == "size") {
-    sorttedArray = listing.sort((a, b) => (a.size > b.size ? 1 : -1));
+    sorttedArray = FilterPlanets().sort((a, b) => (a.size > b.size ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -528,7 +574,7 @@ SortList = () => {
         `;
     });
   } else if (selectOption() == "population") {
-    sorttedArray = listing.sort((a, b) =>
+    sorttedArray = FilterPlanets().sort((a, b) =>
       a.population > b.population ? 1 : -1
     );
     let retrievedList = sorttedArray;
@@ -551,13 +597,13 @@ SortList = () => {
         `;
     });
   } else {
-    display();
+    FilterPlanets()
   }
   //  console.log(listing)
 };
 
 BuyNow = () => {
-  alert("purchased");
+  console.log("purchased");
 };
 
 ToAdminPage = () => {
@@ -566,39 +612,7 @@ ToAdminPage = () => {
     window.location.href = "./admin.html";
   }
 };
-FilterPlanets=()=>{
-    let FilterOption= document.querySelector('#filter').value
-    if(FilterOption!=='all'){
 
-        console.log(FilterOption)
-        document.querySelector('#target').innerHTML='';
-            let specificView= listing.filter(Planet => Planet.tempRange == FilterOption);
-        specificView.forEach((Planet)=>{
-
-            document.querySelector('#target').innerHTML+=`
-            <div class="Item"  onclick='BuyNow()'  >
-            <img src="${Planet.image}"  alt="PLanet IMage">  
-            <h1>${Planet.name}</h1>
-            <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
-    <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
-    <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
-    <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
-    <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
-    <p class="subInfo" dir="rtl" class='pop'> population: ${Planet.population}</p>
-    <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
-    <img src="${Planet.populationURL}" alt="No lifeforms known">
-    
-    </div>
-    `;   
-    console.log(specificView)
-});
-
-
-}
-else{
-    display()
-}
-}
 searchPlanet=()=>{
   let SearchTerm= document.querySelector('#searchInput').value;
   if(SearchTerm==''){
@@ -629,4 +643,17 @@ searchPlanet=()=>{
     `;
 
   }
+}
+navmenu=(event)=>{
+  let contextMenu = document.querySelector('#navMenu');
+
+  contextMenu.style.top=event.offsetY + 'px';
+  contextMenu.style.left=event.offsetX + 'px';
+  contextMenu.classList.toggle('active')
+  console.log('y= ',event.offsetY)
+  console.log('x= ', event.offsetX)
+}
+
+resetMenu=()=>{
+  document.querySelector('#navMenu').classList.remove('active')
 }
