@@ -39,19 +39,10 @@ deleteItem = () => {
   display();
 };
 AddToArray = () => {
-  // id: 14,
-  // name: "Ajian",
-  // atmosphere: "ample",
-  // moons: "5",
-  // tempRange: "habitable",
-  // water: "liquid",
-  // size: "large",
-  // population: "colonial",
-  // populationURL:
-  //   "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(28).png",
-  // image:
-  //   "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(14).png",
-  // price: (Math.rando
+  document.querySelector("#target").innerHTML = "";
+  document.querySelector("#target").innerHTML = `
+
+`;
   let Array = localStorage.listing;
   let id = Array.length + 1;
   let name = prompt("enter planets name");
@@ -64,21 +55,21 @@ AddToArray = () => {
   let populationURL = prompt("species image url");
   let image = prompt("planet image url");
   let price = (Math.random() * 40000).toFixed(2);
-  newPlanet ={
-
-      id: id,
-      name: name,
-      atmosphere: atmosphere,
-      moons: moons,
-      tempRange: tempRange,
-      water: water,
-      size: size,
-      population: population,
-      populationURL: populationURL,
-      image: image,
-      price: price,
-    } ;
-      listing.push(newPlanet);
+  newPlanet = {
+    id: id,
+    name: name,
+    atmosphere: atmosphere,
+    moons: moons,
+    tempRange: tempRange,
+    water: water,
+    size: size,
+    population: population,
+    populationURL: populationURL,
+    image: image,
+    price: price,
+  };
+  listing.push(newPlanet);
+  localStorage.clear();
   localStorage.setItem("listing", JSON.stringify(listing));
   window.location.reload();
 };
