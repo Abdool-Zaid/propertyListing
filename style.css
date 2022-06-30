@@ -141,7 +141,7 @@ flex-direction: column;
 transform: translateY(-140px);
 }
 div#centerdiv.hexagon {
-  background-color:#1e3a6034;
+  background-color: transparent !important;
 
 }
 
