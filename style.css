@@ -2,9 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Electrolize', sans-serif;
+  font-family: "Electrolize", sans-serif;
   scroll-behavior: smooth;
-
 }
 :root {
   --bgTemp: #123417;
@@ -14,9 +13,7 @@
   --acc: #42c8ee;
   --sf: 2em;
   --full: 100%;
-  --menu : #42c8ee7e;
-
- 
+  --menu: #42c8ee7e;
 }
 /* unvisited link */
 a:link {
@@ -44,24 +41,24 @@ a:active {
 body {
   background-color: var(--thirty);
 }
-#landing{
-
-    z-index: 10;
-    top: 0;
-width: 100%;
-    margin-bottom:var(--sf) ;
+#landing {
+  width: 100%;
+  margin-bottom: var(--sf);
 }
-#sort{
-    position: fixed;
-    top: 0;
+#carousel{
     display: flex;
-    margin-left: var(--ss);
-  }
-  
-  #sort > p {
-    margin-left: var(--ss);
+
+}
+#sort {
+  position: fixed;
+  top: 0;
+  display: flex;
+  margin-left: var(--ss);
+}
+
+#sort > p {
+  margin-left: var(--ss);
   padding-left: var(--ss);
-  
 }
 footer {
   background-color: var(--thirty);
@@ -92,24 +89,24 @@ footer > a {
   justify-content: space-evenly;
   padding: var(--ss);
 }
-.Item{
+.Item {
   margin: var(--sf);
-  background-color:var(--sixty);
+  background-color: var(--sixty);
   width: fit-content;
   padding: var(--ss);
-  
-             transform: scale(1);
-             transform-origin:center;
+
+  transform: scale(1);
+  transform-origin: center;
 }
-.item:hover{
-    transform: scale(2);
-    transition: transform 200ms ease-in-out;   
+.item:hover {
+  transform: scale(2);
+  transition: transform 200ms ease-in-out;
 }
 
-#empty{
+#empty {
   margin-top: var(--sf);
 }
-#navMenu{
+#navMenu {
   position: fixed;
   z-index: 100;
   width: 40vw;
@@ -119,59 +116,54 @@ footer > a {
   flex-direction: column;
   flex-wrap: wrap;
   transform: scale(0);
-  transform-origin:top left ;
-
+  transform-origin: top left;
 }
-#navMenu.active{
+#navMenu.active {
   transform: scale(1);
   transition: transform 200ms ease-in-out;
 }
 
-#navMenu .hexagonArea{
+#navMenu .hexagonArea {
   display: flex;
-  
 }
-#navMenu .hexagonArea .hexagon{
-position: relative;
-width: 256px;
-height: 256px;
-margin:var(--ss);
-clip-path: polygon(0 25%, 50% 0,100% 25% , 100% 75%, 50% 100% ,0 75%);
-background-color: var(--menu);
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-cursor: pointer;
-transition: .5s;
-
+#navMenu .hexagonArea .hexagon {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  margin: var(--ss);
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  background-color: var(--menu);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.5s;
 }
-#navMenu .hexagonArea .hexagon form{
-display: flex;
-flex-direction: column;
+#navMenu .hexagonArea .hexagon form {
+  display: flex;
+  flex-direction: column;
 }
-#centerRow{
+#centerRow {
   transform: translateY(-69px);
 }
-#lastRow{
-transform: translateY(-140px);
+#lastRow {
+  transform: translateY(-140px);
 }
 div#centerdiv.hexagon {
   background-color: transparent !important;
-border-color: transparent;
+  border-color: transparent;
 }
 
-.hexagon{
+.hexagon {
   border-radius: 0px;
-background: #0e718f;
-box-shadow:  18px 18px 36px #0c607a,
-             -18px -18px 36px #1082a4;
+  background: #0e718f;
+  box-shadow: 18px 18px 36px #0c607a, -18px -18px 36px #1082a4;
 }
-.standard{
+.standard {
   color: black !important;
 }
-button{
-  background-color:transparent;
+button {
+  background-color: transparent;
   border: dashed;
-  
 }
