@@ -64,19 +64,21 @@ AddToArray = () => {
   let populationURL = prompt("species image url");
   let image = prompt("planet image url");
   let price = (Math.random() * 40000).toFixed(2);
-  newArray = listing.push({
-    id: id,
-    name: name,
-    atmosphere: atmosphere,
-    moons: moons,
-    tempRange: tempRange,
-    water: water,
-    size: size,
-    population: population,
-    populationURL: populationURL,
-    image: image,
-    price: price,
-  });
-  localStorage.setItem("listing", JSON.stringify(newArray));
+  newPlanet ={
+
+      id: id,
+      name: name,
+      atmosphere: atmosphere,
+      moons: moons,
+      tempRange: tempRange,
+      water: water,
+      size: size,
+      population: population,
+      populationURL: populationURL,
+      image: image,
+      price: price,
+    } ;
+      listing.push(newPlanet);
+  localStorage.setItem("listing", JSON.stringify(listing));
   window.location.reload();
 };

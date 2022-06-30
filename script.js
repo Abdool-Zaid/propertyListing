@@ -436,7 +436,7 @@ else{
 }
 
 SortList = () => {
-  // list.sort((a,b)=>{ return a.moons -b.moons})
+
   let selectOption = () => {
     return document.querySelector("#SortPlanets").value;
   };
