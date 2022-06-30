@@ -11,26 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    
     <link rel="icon" type="image/x-icon" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body oncontextmenu="event.preventDefault(); navmenu(event)">
     <section id="landing">
         <h1>welcome</h1>
+        <div id="poster">
+            <h1>Lotetur adipisicing elit. Nemo dolorum possimus ratione adipisci aspernatur, dolorem cum in quod tempore, suscipit, enim tempora. Sit eligendi vel est distinctio. Molestiae illum dicta sunt ea dolore. Sequi impedit assumenda nobis non voluptates alias libero dolorum sapiente nesciunt, vitae quaerat perspiciatis, rem obcaecati qui?</h1>
+            <h1>Lotetur adipisicing elit. Nemo dolorum possimus ratione adipisci aspernatur, dolorem cum in quod tempore, suscipit, enim tempora. Sit eligendi vel est distinctio. Molestiae illum dicta sunt ea dolore. Sequi impedit assumenda nobis non voluptates alias libero dolorum sapiente nesciunt, vitae quaerat perspiciatis, rem obcaecati qui?</h1>
+        </div>
         <marquee id="carousel" behavior="1" direction="right" scrollamount="30">
             <img src="https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/carousel/download.png" alt="landing image">
             <img src="https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/carousel/download%20(1).png" alt="landing image">
@@ -81,7 +72,9 @@
           </div>
         <!-- filter -->
         
-        <div id="centerdiv" class="hexagon"></div>
+        <div id="centerdiv" class="hexagon">
+            <canvas></canvas>
+        </div>
         <div id="logInMenu" class="hexagon">
           <form action="post" onsubmit="event.preventDefault()">
             <label for="LogIn"

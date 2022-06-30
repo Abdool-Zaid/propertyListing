@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Electrolize", sans-serif;
   scroll-behavior: smooth;
+  border-width: 0;
 }
 :root {
   --bgTemp: #123417;
@@ -42,11 +43,20 @@ body {
   background-color: var(--thirty);
 }
 #landing {
-  width: 100%;
-  margin-bottom: var(--sf);
+display: none;
+    margin-bottom: var(--sf);
 }
-#carousel{
-    display: flex;
+#poster{
+    position: relative;
+    top: 0;
+    overflow-y: hidden;
+}
+
+#carousel > img{
+    background-color: var(--acc);
+    /* padding:3em; */
+    
+    border-width: var(--sf);
 
 }
 #sort {
@@ -55,6 +65,7 @@ body {
   display: flex;
   margin-left: var(--ss);
 }
+
 
 #sort > p {
   margin-left: var(--ss);
@@ -84,7 +95,9 @@ footer > a {
 
 } */
 #target {
+    
   display: flex;
+  /* display: none; */
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: var(--ss);
@@ -151,7 +164,7 @@ footer > a {
   transform: translateY(-140px);
 }
 div#centerdiv.hexagon {
-  background-color: transparent !important;
+  background-color: transparent !important  ;
   border-color: transparent;
 }
 
