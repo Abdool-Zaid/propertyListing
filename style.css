@@ -142,7 +142,7 @@ transform: translateY(-140px);
 }
 div#centerdiv.hexagon {
   background-color: transparent !important;
-
+border-color: transparent;
 }
 
 .hexagon{
