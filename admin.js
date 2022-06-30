@@ -43,7 +43,7 @@ AddToArray = () => {
   document.querySelector("#target").innerHTML = `
 
 `;
-  let Array = localStorage.listing;
+  let Array = JSON.parse(localStorage.listing);
   let id = Array.length + 1;
   let name = prompt("enter planets name");
   let atmosphere = prompt("enter atmospheric condition");
