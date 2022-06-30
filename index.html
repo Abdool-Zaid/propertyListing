@@ -29,6 +29,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body oncontextmenu="event.preventDefault(); navmenu(event)">
+    <section id="landing">
+        <marquee behavior="1" direction="right" scrollamount="3000">
+            <h1>welcome</h1>
+
+        </marquee>
+    </section>
     <!-- context menu -->
     <div id="navMenu">
       <div id="firstRow" class="hexagonArea">
@@ -45,14 +51,14 @@
                 <option value="population">population</option>
             </select>
         </div>
+        <a href="./assets/Gracefeel's retreat.pdf" download class="standard">
         <div id="intialMenu" class="hexagon">
             <h2>
-              <a href="./assets/Gracefeel's retreat.pdf" download class="standard"
-                >download brochure
-              </a>
+                download brochure
             </h2>
-          </div>
-      </div>
+        </div>
+    </div>
+</a>
       <div id="centerRow" class="hexagonArea">
 
         <div id="filterMenu" class="hexagon">
@@ -110,11 +116,11 @@
     <div id="target"></div>
 
     <footer>
-      <marquee direction="right" scrollamount="3">
+     
         <a href="tel:0621213907">call now</a>
         <a href="./assets/Gracefeel's retreat.pdf" download>download brocure</a>
         <a href="https://www.craiyon.com/" target="_blank">art by craiyon</a>
-      </marquee>
+      
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.0.slim.min.js"

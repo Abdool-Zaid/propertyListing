@@ -817,8 +817,7 @@ navmenu=(event)=>{
   contextMenu.style.top=event.offsetY + 'px';
   contextMenu.style.left=event.offsetX + 'px';
   contextMenu.classList.toggle('active')
-  console.log('y= ',event.offsetY)
-  console.log('x= ', event.offsetX)
+ 
 }
 
 resetMenu=()=>{

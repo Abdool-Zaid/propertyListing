@@ -35,7 +35,7 @@ deleteItem = () => {
     console.log("running");
     
 });
-localStorage.listing = 0;
+// localStorage.listing = 0;
 localStorage.setItem("listing", JSON.stringify(listing));
 display();
 };
