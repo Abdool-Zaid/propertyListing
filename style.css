@@ -151,3 +151,11 @@ background: #0e718f;
 box-shadow:  18px 18px 36px #0c607a,
              -18px -18px 36px #1082a4;
 }
+.standard{
+  color: black !important;
+}
+button{
+  background-color:transparent;
+  border: dashed;
+  
+}
