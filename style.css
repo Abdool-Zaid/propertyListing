@@ -83,11 +83,19 @@ marquee > a {
   padding: var(--ss);
 }
 .Item {
-  margin-top: var(--sf);
+  margin: var(--sf);
   background-color: var(--thirty);
   width: fit-content;
   padding: var(--ss);
-  margin-bottom: var(--ss);
+  border-radius: 0px;
+  box-shadow:  11px 11px 21px #1a3152,
+  -11px -11px 21px #23436e;
+             transform: scale(1);
+             transform-origin:center;
+}
+.item:hover{
+    transform: scale(2);
+    transition: transform 200ms ease-in-out;   
 }
 
 #empty{

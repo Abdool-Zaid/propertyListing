@@ -32,38 +32,41 @@
     <!-- context menu -->
     <div id="navMenu">
       <div id="firstRow" class="hexagonArea">
-        <div id="filterMenu" class="hexagon">
-          <h2>filter by conditions</h2>
-          <select name="filter" id="filter" onchange="FilterPlanets()">
-            <option value="all">all</option>
-            <option value="habitable">habitable</option>
-            <option value="high">high</option>
-            <option value="low">low</option>
-            <option value="extreme">extreme</option>
-          </select>
+          <div id="sortMenu" class="hexagon">
+              <h2>sort by</h2>
+              <select name="sortPlanets" id="SortPlanets" onchange="SortList()">
+                <option value="all">latest</option>
+                <option value="atmosphere">atmospheric conditions</option>
+                <option value="name">name</option>
+                <option value="moons">moons</option>
+                <option value="tempRange">weather</option>
+                <option value="water">water</option>
+                <option value="size">size</option>
+                <option value="population">population</option>
+            </select>
         </div>
-        <div id="sortMenu" class="hexagon">
-          <h2>sort by</h2>
-          <select name="sortPlanets" id="SortPlanets" onchange="SortList()">
-            <option value="all">latest</option>
-            <option value="atmosphere">atmospheric conditions</option>
-            <option value="name">name</option>
-            <option value="moons">moons</option>
-            <option value="tempRange">weather</option>
-            <option value="water">water</option>
-            <option value="size">size</option>
-            <option value="population">population</option>
-          </select>
-        </div>
+        <div id="intialMenu" class="hexagon">
+            <h2>
+              <a href="./assets/Gracefeel's retreat.pdf" download class="standard"
+                >download brochure
+              </a>
+            </h2>
+          </div>
       </div>
       <div id="centerRow" class="hexagonArea">
-        <div id="intialMenu" class="hexagon">
-          <h2>
-            <a href="./assets/Gracefeel's retreat.pdf" download class="standard"
-              >download brocure</a
-            >
-          </h2>
-        </div>
+
+        <div id="filterMenu" class="hexagon">
+            <h2>filter by temp Range</h2>
+            <select name="filter" id="filter" onchange="FilterPlanets()">
+              <option value="all">all</option>
+              <option value="habitable">habitable</option>
+              <option value="high">high</option>
+              <option value="low">low</option>
+              <option value="extreme">extreme</option>
+            </select>
+          </div>
+        <!-- filter -->
+        
         <div id="centerdiv" class="hexagon"></div>
         <div id="logInMenu" class="hexagon">
           <form action="post" onsubmit="event.preventDefault()">
@@ -99,16 +102,16 @@
       </marquee>
     </footer>
     <script
-    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-    crossorigin="anonymous"
-  ></script>
-  <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

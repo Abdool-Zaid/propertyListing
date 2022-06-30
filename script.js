@@ -602,6 +602,173 @@ SortList = () => {
   //  console.log(listing)
 };
 
+SortListDesc = () => {
+  // list.sort((a,b)=>{ return a.moons -b.moons})
+  let selectOption = () => {
+    return document.querySelector("#SortPlanets").value;
+  };
+  console.log(FilterPlanets())
+  let sorttedArray = FilterPlanets();
+
+  if (selectOption() == "moons") {
+    sorttedArray = FilterPlanets().sort((a, b) => {
+      return b.moons - a.moons;
+    });
+    let retrievedList = sorttedArray;
+    document.querySelector("#target").innerHTML = "";
+    retrievedList.forEach((Planet) => {
+      document.querySelector("#target").innerHTML += `
+        <div class="Item" onclick='BuyNow()' >
+        <img src="${Planet.image}" alt="PLanet IMage">  
+        <h1>${Planet.name}</h1>
+        <h1 class="subInfo" dir="rtl">Moons: ${Planet.moons}</h1>
+        <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+        <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+        <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+        <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+        <img src="${Planet.populationURL}" alt="No lifeforms known">
+        
+        </div>
+        `;
+    });
+  } else if (selectOption() == "atmosphere") {
+    sorttedArray = FilterPlanets().sort((a, b) =>
+      a.atmosphere > b.atmosphere ? 1 : -1
+    );
+    let retrievedList = sorttedArray;
+    document.querySelector("#target").innerHTML = "";
+    retrievedList.forEach((Planet) => {
+      document.querySelector("#target").innerHTML += `
+        <div class="Item" onclick='BuyNow()' >
+        <img src="${Planet.image}" alt="PLanet IMage">  
+        <h1>${Planet.name}</h1>
+        <h1 dir="rtl">atmosphere: ${Planet.atmosphere}</h1>
+        <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+        <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+        <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+        <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+        <img src="${Planet.populationURL}" alt="No lifeforms known">
+        
+        </div>
+        `;
+    });
+  } else if (selectOption() == "name") {
+    sorttedArray = FilterPlanets().sort((a, b) => (a.name > b.name ? 1 : -1));
+    let retrievedList = sorttedArray;
+    document.querySelector("#target").innerHTML = "";
+    retrievedList.forEach((Planet) => {
+      document.querySelector("#target").innerHTML += `
+        <div class="Item"  onclick='BuyNow()' >
+        <img src="${Planet.image}" alt="PLanet IMage">  
+        <h1>${Planet.name}</h1>
+        <p class="subInfo" dir="rtl">atmospheric conditions: ${Planet.atmosphere}</p>
+        <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+        <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+        <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+        <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+        <img src="${Planet.populationURL}" alt="No lifeforms known">
+        
+        </div>
+        `;
+    });
+  } else if (selectOption() == "tempRange") {
+    sorttedArray = FilterPlanets().sort((a, b) => (a.tempRange < b.tempRange ? 1 : -1));
+    let retrievedList = sorttedArray;
+    document.querySelector("#target").innerHTML = "";
+    retrievedList.forEach((Planet) => {
+      document.querySelector("#target").innerHTML += `
+        <div class="Item"  onclick='BuyNow()' >
+        <img src="${Planet.image}" alt="PLanet IMage">  
+        <h1>${Planet.name}</h1>
+        <h1>Weather: ${Planet.tempRange}</h1>
+        <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+        <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+        <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+        <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+        <img src="${Planet.populationURL}" alt="No lifeforms known">
+        
+        </div>
+        `;
+    });
+  } else if (selectOption() == "water") {
+    sorttedArray = FilterPlanets().sort((a, b) => (a.water > b.water ? 1 : -1));
+    let retrievedList = sorttedArray;
+    document.querySelector("#target").innerHTML = "";
+    retrievedList.forEach((Planet) => {
+      document.querySelector("#target").innerHTML += `
+        <div class="Item"  onclick='BuyNow()' >
+        <img src="${Planet.image}" alt="PLanet IMage">  
+        <h1>${Planet.name}</h1>
+        <h1> water: ${Planet.water}</h1>
+        <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+        <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+        <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+        <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+        <img src="${Planet.populationURL}" alt="No lifeforms known">
+        
+        </div>
+        `;
+    });
+  } else if (selectOption() == "size") {
+    sorttedArray = FilterPlanets().sort((a, b) => (a.size > b.size ? 1 : -1));
+    let retrievedList = sorttedArray;
+    document.querySelector("#target").innerHTML = "";
+    retrievedList.forEach((Planet) => {
+      document.querySelector("#target").innerHTML += `
+        <div class="Item" onclick='BuyNow()'  >
+        <img src="${Planet.image}" alt="PLanet IMage">  
+        <h1>${Planet.name}</h1>
+        <h1> Size: ${Planet.size}</h1>
+        <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+        <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+        <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+        <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+        <p class="subInfo" dir="rtl" class ='pop'> population: ${Planet.population}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+        <img src="${Planet.populationURL}" alt="No lifeforms known">
+        
+        </div>
+        `;
+    });
+  } else if (selectOption() == "population") {
+    sorttedArray = FilterPlanets().sort((a, b) =>
+      a.population > b.population ? 1 : -1
+    );
+    let retrievedList = sorttedArray;
+    document.querySelector("#target").innerHTML = "";
+    retrievedList.forEach((Planet) => {
+      document.querySelector("#target").innerHTML += `
+        <div class="Item"  onclick='BuyNow()' >
+        <img src="${Planet.image}" alt="PLanet IMage">  
+        <h1>${Planet.name}</h1>
+        <h1 class ='pop'> population: ${Planet.population}</h1>
+        <h4 dir="rtl">atmospheric conditions: ${Planet.atmosphere}</h4>
+        <p class="subInfo" dir="rtl">Moons: ${Planet.moons}</p>
+        <p class="subInfo" dir="rtl">Weather: ${Planet.tempRange}</p>
+        <p class="subInfo" dir="rtl"> water: ${Planet.water}</p>
+        <p class="subInfo" dir="rtl"> Size: ${Planet.size}</p>
+        <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
+        <img src="${Planet.populationURL}" alt="No lifeforms known">
+        
+        </div>
+        `;
+    });
+  } else {
+    FilterPlanets()
+  }
+  //  console.log(listing)
+};
+
 BuyNow = () => {
   console.log("purchased");
 };
@@ -614,13 +781,13 @@ ToAdminPage = () => {
 };
 
 searchPlanet=()=>{
-  let SearchTerm= document.querySelector('#searchInput').value;
+  let SearchTerm= document.querySelector('#searchInput').value.toLowerCase();
   if(SearchTerm==''){
     alert(`enter a planet's name`)
   }
   else{
     document.querySelector('#target').innerHTML='';
-    let item = listing.find(o => o.name === SearchTerm)
+    let item = listing.find(o => o.name.toLowerCase()=== SearchTerm)
     
     document.querySelector('#target').innerHTML=` <div id="empty">
     <h1>No Planet found</h1>
