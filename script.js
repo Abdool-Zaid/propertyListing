@@ -22,7 +22,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(11).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(1).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 2,
@@ -37,7 +37,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download.png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(2).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 3,
@@ -52,7 +52,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(32).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(3).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 4,
@@ -67,7 +67,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(13).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(4).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 5,
@@ -82,7 +82,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(12).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(5).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 6,
@@ -97,7 +97,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(28).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(6).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 7,
@@ -111,7 +111,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         populationURL: "",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(7).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 8,
@@ -126,7 +126,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(27).png ",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(8).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 9,
@@ -141,7 +141,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(26).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(9).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 10,
@@ -156,7 +156,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(38).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(10).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 11,
@@ -171,7 +171,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(2).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(11).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 12,
@@ -186,7 +186,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(37).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(12).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 13,
@@ -201,7 +201,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(18).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(13).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 14,
@@ -216,7 +216,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(28).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(14).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 15,
@@ -231,7 +231,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(12).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(15).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 16,
@@ -246,7 +246,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(4).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(16).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 17,
@@ -261,7 +261,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(17).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(17).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 18,
@@ -275,7 +275,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         populationURL: "",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(18).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 19,
@@ -290,7 +290,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(1).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(19).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 20,
@@ -305,7 +305,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download.png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(20).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 21,
@@ -320,7 +320,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(25).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(21).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 22,
@@ -335,7 +335,7 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(10).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download%20(22).png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
       {
         id: 23,
@@ -350,14 +350,14 @@ let listing = JSON.parse(localStorage.getItem("listing"))
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/aliens/download%20(34).png",
         image:
           "https://raw.githubusercontent.com/Abdool-Zaid/propertyListing/main/assets/planetImages/download.png",
-        price: Math.random() * 40000,
+        price: (Math.random()*40000).toFixed(2),
       },
     ];
 resetArray = () => {
   localStorage.setItem("listing", JSON.stringify(listing));
-
-  console.log("reset complete");
 };
+resetArray()
+
 
 let retrievedList = localStorage.getItem("listing");
 let RetrievedArray = JSON.parse(localStorage.getItem("listing"));

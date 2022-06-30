@@ -13,51 +13,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body oncontextmenu="event.preventDefault(); navmenu(event)" >
-    <!-- <div id="sort">
-      <select name="filter" id="filter" onchange="FilterPlanets()">
-        <option value="all">all</option>
-        <option value="habitable">habitable</option>
-        <option value="high">high</option>
-        <option value="low">low</option>
-        <option value="extreme">extreme</option>
-      </select>
-      <select name="sortPlanets" id="SortPlanets" onchange="SortList()">
-        <option value="all">all</option>
-        <option value="atmosphere">atmospheric conditions</option>
-        <option value="name">name</option>
-        <option value="moons">moons</option>
-        <option value="tempRange">weather</option>
-        <option value="water">water</option>
-        <option value="size">size</option>
-        <option value="population">population</option>
-      </select>
-      <button onclick="resetArray()">initialise</button>
-      
-      <form action="post" onsubmit="event.preventDefault()">
-        <label for="LogIn"
-        ><input type="text" id="LogIn" placeholder="PassWord" />
-      </label>
-      <button onclick="ToAdminPage()">Log In</button>
-    </form>
-    <form action="post" onsubmit="event.preventDefault()">
-      <input type="text" id="searchInput" placeholder="search">
-      <button onclick="searchPlanet()">locate planet </button>
-    </form>
-  </div> -->
+ 
   <!-- context menu -->
   <div id="navMenu">
     <div id="firstRow" class="hexagonArea">
-
-      <div id="filterMenu" class="hexagon"><select name="filter" id="filter" onchange="FilterPlanets()">
-        <option value="all">all</option>
-        <option value="habitable">habitable</option>
-        <option value="high">high</option>
-        <option value="low">low</option>
-        <option value="extreme">extreme</option>
-      </select></div>
-      <div id="sortMenu" class="hexagon">
-        <select name="sortPlanets" id="SortPlanets" onchange="SortList()">
+      <div id="filterMenu" class="hexagon">
+        <h2>filter by conditions</h2>
+        <select name="filter" id="filter" onchange="FilterPlanets()">
           <option value="all">all</option>
+          <option value="habitable">habitable</option>
+          <option value="high">high</option>
+          <option value="low">low</option>
+          <option value="extreme">extreme</option>
+        </select></div>
+        <div id="sortMenu" class="hexagon">
+        <h2>sort by</h2>
+        <select name="sortPlanets" id="SortPlanets" onchange="SortList()">
+          <option value="all">latest</option>
           <option value="atmosphere">atmospheric conditions</option>
           <option value="name">name</option>
           <option value="moons">moons</option>
@@ -74,7 +46,7 @@
       <button onclick="resetArray()">initialise</button>
     </div>
     <div id="centerdiv" class="hexagon">
-
+      
     </div>
     <div id="logInMenu" class="hexagon">
       <form action="post" onsubmit="event.preventDefault()">
@@ -88,6 +60,7 @@
 </div>
 <div id="lastRow" class="hexagonArea">
   <div id="searchMenu" class="hexagon">
+    <h2>search for</h2>
     <form action="post" onsubmit="event.preventDefault()">
       <input type="text" id="searchInput" placeholder="search">
       <button onclick="searchPlanet()">locate planet </button>

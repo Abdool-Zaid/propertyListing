@@ -54,7 +54,7 @@ body {
   
 }
 footer {
-  background-color: var(--bgTemp);
+  background-color: var(--thirty);
   position: fixed;
   bottom: 0;
   width: var(--full);
