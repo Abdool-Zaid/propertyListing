@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Electrolize', sans-serif;
+  scroll-behavior: smooth;
 
 }
 :root {
@@ -44,7 +45,7 @@ body {
   background-color: var(--thirty);
 }
 #landing{
-    position: fixed;
+
     z-index: 10;
     top: 0;
 width: 100%;
@@ -91,7 +92,7 @@ footer > a {
   justify-content: space-evenly;
   padding: var(--ss);
 }
-.Item {
+.Item{
   margin: var(--sf);
   background-color:var(--sixty);
   width: fit-content;
