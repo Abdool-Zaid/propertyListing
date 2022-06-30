@@ -33,7 +33,7 @@
     <div id="navMenu">
       <div id="firstRow" class="hexagonArea">
           <div id="sortMenu" class="hexagon">
-              <h2>sort by</h2>
+              <h2>sort ascending</h2>
               <select name="sortPlanets" id="SortPlanets" onchange="SortList()">
                 <option value="all">latest</option>
                 <option value="atmosphere">atmospheric conditions</option>
@@ -79,14 +79,29 @@
       </div>
       <div id="lastRow" class="hexagonArea">
         <div id="searchMenu" class="hexagon">
-          <h2>search for</h2>
-          <form action="post" onsubmit="event.preventDefault()">
-            <input type="text" id="searchInput" placeholder="search" />
-            <button onclick="searchPlanet()">locate planet</button>
-          </form>
+
+            <div id="sortMenuD" class="hexagon">
+                <h2>sort descending</h2>
+                <select name="sortPlanets" id="SortPlanetsDEsc" onchange="SortListDesc()">
+                  <option value="all">latest</option>
+                  <option value="atmosphere">atmospheric conditions</option>
+                  <option value="name">name</option>
+                  <option value="moons">moons</option>
+                  <option value="tempRange">weather</option>
+                  <option value="water">water</option>
+                  <option value="size">size</option>
+                  <option value="population">population</option>
+              </select>
+          </div>
+
         </div>
         <div id="themeMenu" class="hexagon">
-          <h2>Gracefeel's Retreat</h2>
+            <h2>search for</h2>
+            <form action="post" onsubmit="event.preventDefault()">
+              <input type="text" id="searchInput" placeholder="search" />
+              <button onclick="searchPlanet()">locate planet</button>
+            </form>
+          
         </div>
       </div>
     </div>

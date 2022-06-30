@@ -445,7 +445,7 @@ SortList = () => {
 
   if (selectOption() == "moons") {
     sorttedArray = FilterPlanets().sort((a, b) => {
-      return b.moons - a.moons;
+      return a.moons - b.moons;
     });
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
@@ -601,16 +601,17 @@ SortList = () => {
   }
   //  console.log(listing)
 };
-
+// descending sort
 SortListDesc = () => {
-  // list.sort((a,b)=>{ return a.moons -b.moons})
+  
   let selectOption = () => {
-    return document.querySelector("#SortPlanets").value;
+    return document.querySelector("#SortPlanetsDEsc").value;
   };
   console.log(FilterPlanets())
   let sorttedArray = FilterPlanets();
 
   if (selectOption() == "moons") {
+    console.log('running')
     sorttedArray = FilterPlanets().sort((a, b) => {
       return b.moons - a.moons;
     });
@@ -635,7 +636,7 @@ SortListDesc = () => {
     });
   } else if (selectOption() == "atmosphere") {
     sorttedArray = FilterPlanets().sort((a, b) =>
-      a.atmosphere > b.atmosphere ? 1 : -1
+      a.atmosphere < b.atmosphere ? 1 : -1
     );
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
@@ -657,7 +658,7 @@ SortListDesc = () => {
         `;
     });
   } else if (selectOption() == "name") {
-    sorttedArray = FilterPlanets().sort((a, b) => (a.name > b.name ? 1 : -1));
+    sorttedArray = FilterPlanets().sort((a, b) => (a.name < b.name ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -699,7 +700,7 @@ SortListDesc = () => {
         `;
     });
   } else if (selectOption() == "water") {
-    sorttedArray = FilterPlanets().sort((a, b) => (a.water > b.water ? 1 : -1));
+    sorttedArray = FilterPlanets().sort((a, b) => (a.water < b.water ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -720,7 +721,7 @@ SortListDesc = () => {
         `;
     });
   } else if (selectOption() == "size") {
-    sorttedArray = FilterPlanets().sort((a, b) => (a.size > b.size ? 1 : -1));
+    sorttedArray = FilterPlanets().sort((a, b) => (a.size < b.size ? 1 : -1));
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
     retrievedList.forEach((Planet) => {
@@ -742,7 +743,7 @@ SortListDesc = () => {
     });
   } else if (selectOption() == "population") {
     sorttedArray = FilterPlanets().sort((a, b) =>
-      a.population > b.population ? 1 : -1
+      a.population < b.population ? 1 : -1
     );
     let retrievedList = sorttedArray;
     document.querySelector("#target").innerHTML = "";
@@ -775,7 +776,7 @@ BuyNow = () => {
 
 ToAdminPage = () => {
   let password = document.querySelector("#LogIn").value;
-  if (password == "you") {
+  if (password == "shepherd") {
     window.location.href = "./admin.html";
   }
 };
@@ -805,7 +806,6 @@ searchPlanet=()=>{
     <p class="subInfo" dir="rtl" class='pop'> population: ${item.population}</p>
     <p class="subInfo" dir="rtl"> JWT: ${item.price}</p>
     <img src="${item.populationURL}" alt="No lifeforms known">
-    
     </div>
     `;
 
