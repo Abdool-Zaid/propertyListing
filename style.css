@@ -105,7 +105,7 @@ footer > a {
 .Item {
   margin: var(--sf);
   background-color: var(--sixty);
-  width: fit-content;
+  width: max-content;
   padding: var(--ss);
 
   transform: scale(1);

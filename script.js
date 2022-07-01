@@ -356,8 +356,8 @@ let listing = JSON.parse(localStorage.getItem("listing"))
 resetArray = () => {
   localStorage.setItem("listing", JSON.stringify(listing));
 };
-resetArray()
 
+let array = JSON.parse(localStorage.getItem(listing))?console.log('active'):resetArray()
 
 let retrievedList = localStorage.getItem("listing");
 let RetrievedArray = JSON.parse(localStorage.getItem("listing"));
@@ -402,7 +402,7 @@ FilterPlanets=()=>{
     if(FilterOption!=='all'){
 
         document.querySelector('#target').innerHTML='';
-            let specificView= listing.filter(Planet => Planet.tempRange == FilterOption);
+            let specificView= Array.filter(Planet => Planet.tempRange == FilterOption);
         specificView.forEach((Planet)=>{
 
             document.querySelector('#target').innerHTML+=`

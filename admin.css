@@ -63,3 +63,14 @@ margin: var(--ss);
   img{
     margin: var(--ss);
   }
+  #addForm{
+    display: flex;
+    border: dashed;
+    flex-direction: column;
+    width: 40vw;
+    padding: var(--sf);
+  }
+  #addForm > * {
+    height: var(--sf);
+margin: var(--ss);
+  }

@@ -38,22 +38,37 @@ deleteItem = () => {
   localStorage.setItem("listing", JSON.stringify(listing));
   display();
 };
-AddToArray = () => {
+runAdd=()=>{
   document.querySelector("#target").innerHTML = "";
   document.querySelector("#target").innerHTML = `
+  <form action="post " onsubmit="event.preventDefault()" id="addForm">
+  <input type="text" placeholder="planet name" id="NewName">
+  <input type="text" placeholder="atmosphere" id="NewAtmosphere">
+  <input type="text" placeholder="moons" id="NewMoons">
+  <input type="text" placeholder="tempRange" id="NewTempRange">
+  <input type="text" placeholder="water" id="NewWater">
+  <input type="text" placeholder="size" id="NewSize">
+  <input type="text" placeholder="population" id="NewPopulation">
+  <input type="text" placeholder="populationURL" id="NewPopulationURL">
+  <input type="text" placeholder="image" id="NewImageURL">
+  <button onclick="AddToArray()" type="submit">submit</button>
+  </form>  
+  `;
+  
+}
+AddToArray = () => {
 
-`;
   let Array = JSON.parse(localStorage.listing);
   let id = Array.length + 1;
-  let name = prompt("enter planets name");
-  let atmosphere = prompt("enter atmospheric condition");
-  let moons = prompt("enter amount of moons");
-  let tempRange = prompt("enter tempRange");
-  let water = prompt("enter water state");
-  let size = prompt("enter size");
-  let population = prompt("enter population");
-  let populationURL = prompt("species image url");
-  let image = prompt("planet image url");
+  let name = document.querySelector('#NewName').value;
+  let atmosphere = document.querySelector('#NewAtmosphere').value;
+  let moons = document.querySelector('#NewMoons').value;
+  let tempRange =document.querySelector('#NewTempRange').value;
+  let water = document.querySelector('#NewWater').value;
+  let size = document.querySelector('#NewSize').value;
+  let population = document.querySelector('#NewPopulation').value;
+  let populationURL = document.querySelector('#NewPopulationURL').value;
+  let image = document.querySelector('#NewImageURL').value
   let price = (Math.random() * 40000).toFixed(2);
   newPlanet = {
     id: id,
@@ -68,8 +83,8 @@ AddToArray = () => {
     image: image,
     price: price,
   };
-  listing.push(newPlanet);
   localStorage.clear();
+  listing.push(newPlanet);
   localStorage.setItem("listing", JSON.stringify(listing));
   window.location.reload();
 };
