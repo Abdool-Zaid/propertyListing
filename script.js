@@ -357,7 +357,7 @@ resetArray = () => {
   localStorage.setItem("listing", JSON.stringify(listing));
 };
 
-let array = JSON.parse(localStorage.getItem(listing))?console.log('active'):resetArray()
+let Array = JSON.parse(localStorage.getItem(listing))?console.log('active'):resetArray()
 
 let retrievedList = localStorage.getItem("listing");
 let RetrievedArray = JSON.parse(localStorage.getItem("listing"));
@@ -402,7 +402,7 @@ FilterPlanets=()=>{
     if(FilterOption!=='all'){
 
         document.querySelector('#target').innerHTML='';
-            let specificView= Array.filter(Planet => Planet.tempRange == FilterOption);
+            let specificView= listing.filter(Planet => Planet.tempRange == FilterOption);
         specificView.forEach((Planet)=>{
 
             document.querySelector('#target').innerHTML+=`
@@ -814,11 +814,10 @@ searchPlanet=()=>{
 navmenu=(event)=>{
   let contextMenu = document.querySelector('#navMenu');
 
-  contextMenu.style.top=event.offsetY + 'px';
-  contextMenu.style.left=event.offsetX + 'px';
+  // contextMenu.style.top=event.offsetY + 'px';
+  // contextMenu.style.left=event.offsetX + 'px';
   contextMenu.classList.toggle('active')
-  console.log('y= ',event.offsetY)
-  console.log('x= ', event.offsetX)
+
 }
 
 resetMenu=()=>{

@@ -20,7 +20,7 @@ display = () => {
         </div>
         <div class ="editor">
         <button onclick="EditItem()" id="${Planet.id}">edit</button>
-        <button onclick="deleteItem()" id="${Planet.id}">delete</button>
+        <button class="deleteItem" id="${Planet.id}">delete</button>
         </div>
         </div>
         `;
@@ -28,17 +28,26 @@ display = () => {
 };
 display();
 EditItem = () => {};
-deleteItem = () => {
-  listing = listing.filter((Planet) => {
-    console.log(Planet);
-    Planet.id !== this.id;
-    console.log("running");
-  });
-  // localStorage.listing = 0;
-  localStorage.setItem("listing", JSON.stringify(listing));
-  display();
-};
-runAdd=()=>{
+
+document.querySelectorAll(".deleteItem").forEach((event) => {
+  event.onclick = (event) => {
+    let targetID = event.currentTarget.id;
+    console.log(targetID);
+    console.log(listing);
+    let lesserArray = listing.filter(planet =>{planet.id ==targetID})
+    console.log(lesserArray);
+    console.log(newArray);
+localStorage.clear()
+    //   console.log(id)
+    // listing=listing.filter(item=>{
+    //   item.id!==id
+    // })
+    localStorage.setItem("listing", JSON.stringify(listing));
+    display()
+  };
+});
+
+runAdd = () => {
   document.querySelector("#target").innerHTML = "";
   document.querySelector("#target").innerHTML = `
   <form action="post " onsubmit="event.preventDefault()" id="addForm">
@@ -54,21 +63,19 @@ runAdd=()=>{
   <button onclick="AddToArray()" type="submit">submit</button>
   </form>  
   `;
-  
-}
+};
 AddToArray = () => {
-
   let Array = JSON.parse(localStorage.listing);
   let id = Array.length + 1;
-  let name = document.querySelector('#NewName').value;
-  let atmosphere = document.querySelector('#NewAtmosphere').value;
-  let moons = document.querySelector('#NewMoons').value;
-  let tempRange =document.querySelector('#NewTempRange').value;
-  let water = document.querySelector('#NewWater').value;
-  let size = document.querySelector('#NewSize').value;
-  let population = document.querySelector('#NewPopulation').value;
-  let populationURL = document.querySelector('#NewPopulationURL').value;
-  let image = document.querySelector('#NewImageURL').value
+  let name = document.querySelector("#NewName").value;
+  let atmosphere = document.querySelector("#NewAtmosphere").value;
+  let moons = document.querySelector("#NewMoons").value;
+  let tempRange = document.querySelector("#NewTempRange").value;
+  let water = document.querySelector("#NewWater").value;
+  let size = document.querySelector("#NewSize").value;
+  let population = document.querySelector("#NewPopulation").value;
+  let populationURL = document.querySelector("#NewPopulationURL").value;
+  let image = document.querySelector("#NewImageURL").value;
   let price = (Math.random() * 40000).toFixed(2);
   newPlanet = {
     id: id,
