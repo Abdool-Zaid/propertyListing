@@ -34,18 +34,14 @@ document.querySelectorAll(".deleteItem").forEach((event) => {
     let targetID = event.currentTarget.id;
     console.log(targetID);
     console.log(listing);
-    let lesserArray = listing.filter((planet) => {
-      planet.id == targetID;
-    });
-    console.log(lesserArray);
-    console.log(newArray);
-    // localStorage.clear()
-    //   console.log(id)
-    // listing=listing.filter(item=>{
-    //   item.id!==id
-    // })
-    // localStorage.setItem("listing", JSON.stringify(listing));
-    // display()
+    let leanArray= listing.splice(targetID-1,1)
+    console.log(leanArray)
+    console.log(listing);
+    localStorage.clear()
+  
+    localStorage.setItem("listing", JSON.stringify(listing));
+
+  
   };
 });
 
