@@ -19,7 +19,7 @@ display = () => {
     <p class="subInfo" dir="rtl"> JWT: ${Planet.price}</p>
     </div>
     <div class ="editor">
-    <button onclick="EditItem()" id="${Planet.id}">edit</button>
+    <button class="EditItem" id="${Planet.id}">edit</button>
     <button class="deleteItem" id="${Planet.id}">delete</button>
     </div>
     </div>
@@ -28,14 +28,15 @@ display = () => {
 };
     display();
     EditItem = () => {};
-    
+    document.querySelectorAll(".EditItem").forEach((event) => {
+      event.onclick = (event) => {
+        let targetID = event.currentTarget.id;``
+    };
+  });
     document.querySelectorAll(".deleteItem").forEach((event) => {
       event.onclick = (event) => {
         let targetID = event.currentTarget.id;
-        console.log(targetID);
-        console.log(listing);
         let leanArray= listing.splice(targetID-1,1)
-        console.log(leanArray)
         console.log(listing);
         localStorage.clear()
         localStorage.setItem("listing", JSON.stringify(listing));
