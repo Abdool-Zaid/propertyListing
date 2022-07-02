@@ -34,16 +34,18 @@ document.querySelectorAll(".deleteItem").forEach((event) => {
     let targetID = event.currentTarget.id;
     console.log(targetID);
     console.log(listing);
-    let lesserArray = listing.filter(planet =>{planet.id ==targetID})
+    let lesserArray = listing.filter((planet) => {
+      planet.id == targetID;
+    });
     console.log(lesserArray);
     console.log(newArray);
-localStorage.clear()
+    // localStorage.clear()
     //   console.log(id)
     // listing=listing.filter(item=>{
     //   item.id!==id
     // })
-    localStorage.setItem("listing", JSON.stringify(listing));
-    display()
+    // localStorage.setItem("listing", JSON.stringify(listing));
+    // display()
   };
 });
 
@@ -51,17 +53,42 @@ runAdd = () => {
   document.querySelector("#target").innerHTML = "";
   document.querySelector("#target").innerHTML = `
   <form action="post " onsubmit="event.preventDefault()" id="addForm">
-  <input type="text" placeholder="planet name" id="NewName">
-  <input type="text" placeholder="atmosphere" id="NewAtmosphere">
-  <input type="text" placeholder="moons" id="NewMoons">
-  <input type="text" placeholder="tempRange" id="NewTempRange">
-  <input type="text" placeholder="water" id="NewWater">
-  <input type="text" placeholder="size" id="NewSize">
-  <input type="text" placeholder="population" id="NewPopulation">
-  <input type="text" placeholder="populationURL" id="NewPopulationURL">
-  <input type="text" placeholder="image" id="NewImageURL">
-  <button onclick="AddToArray()" type="submit">submit</button>
-  </form>  
+    <input type="text" placeholder="planet name" id="NewName">
+    <select name="atmoshere" id="NewAtmosphere">
+<option value="adequate">adequate</option>
+<option value="minimal">minimal</option>
+<option value="ample">ample</option>
+<option value="none">none</option>
+    </select>
+    <input type="number" placeholder="moons" id="NewMoons">
+    <select name="tempreture range" id="NewTempRange">
+<option value="habitable">habitable</option>
+<option value="high">high</option>
+<option value="low">low</option>
+<option value="extreme">extreme</option>
+    </select>
+    <select name="water" id="NewWater">
+        <option value="liquid">liquid</option>
+        <option value="solid">solid</option>
+        <option value="gas">gas</option>
+        <option value="none">none</option>
+        <option value="ice">ice</option>
+    </select>
+    <select name="size" id="NewSize">
+        <option value="small">small</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+        <option value="twin">twin</option>
+    </select>
+    <select name="population" id="NewPopulation">
+        <option value="native">native</option>
+        <option value="colonial">colonial</option>
+        <option value="none">none</option>
+    </select>
+    <input type="text" placeholder="populationURL" id="NewPopulationURL">
+    <input type="text" placeholder="image" id="NewImageURL">
+    <button onclick="AddToArray()" type="submit">submit</button>
+    </form>
   `;
 };
 AddToArray = () => {
