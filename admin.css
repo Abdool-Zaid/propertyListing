@@ -72,5 +72,11 @@ margin: var(--ss);
   }
   #addForm > * {
     height: var(--sf);
-margin: var(--ss);
+    margin: var(--ss);
+  }
+  .deletedItem{
+    
+    background-color: var(--thirty);
+    padding: var(--ss);
+    margin-bottom: var(--ss);
   }
